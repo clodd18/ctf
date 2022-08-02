@@ -43,6 +43,8 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
         Route::get('retos/{reto}/edit', 'edit')->name('retos.edit');
         Route::put('retos/{reto}', 'update')->name('retos.update');
         Route::delete('retos/{reto}', 'destroy')->name('retos.destroy');
+        Route::get('retos/categoria/{cuestionario}', 'categoria')->name('retos.categoria');
+        Route::post('retos/{reto}', 'resolver')->name('retos.resolver');
     });
 
     Route::get('/estadisticas',[EstadisticaController::class, 'show'])->name('estadisticas');

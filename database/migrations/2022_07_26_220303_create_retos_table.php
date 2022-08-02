@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->text('descripcion');
             $table->text('categoria');
-            $table->text('link');
+            $table->text('enlace');
             $table->string('flag');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

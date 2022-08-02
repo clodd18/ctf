@@ -18,7 +18,6 @@ class EstadisticaController extends Controller
     }
 
     public function destroy(){
-        //return ("hol");
         $user = Auth::user();
         $deleted = DB::table('resultados')->where('user_id', $user->id)->delete();
         $deleted = DB::table('reto_resueltos')->where('user_id', $user->id)->delete();

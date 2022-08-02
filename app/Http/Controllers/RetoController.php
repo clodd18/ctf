@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreReto;
+use App\Models\Cuestionario;
+use App\Models\Resultado;
 use App\Models\Reto;
+use App\Models\RetoResuelto;
+use App\Rules\FlagCheck;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RetoController extends Controller
 {
@@ -51,6 +57,29 @@ class RetoController extends Controller
         ]);
         $reto->update($request->all());
         return redirect()->route('retos.show', $reto->id);
+    }
+
+    public function categoria(Cuestionario $cuestionario){
+        $user = Auth::user();
+        $maximoCuestionario = Resultado::where('user_id', $user->id)->where('cuestionario_id', $cuestionario->id)->max('aciertos');
+        if($maximoCuestionario == null){
+            $maximoCuestionario = 0;
+        }
+        $retosResultos = RetoResuelto::where('user_id', $user->id)->get();
+        $retos = Reto::where('categoria', $cuestionario->nombre)->get();
+        return view('retos.categoria', compact('cuestionario', 'maximoCuestionario', 'retosResultos', 'retos'));
+    }
+
+    public function resolver(Request $request, Reto $reto)
+    {
+        $this->validate($request, ['flag'.$reto->id => ['required', new FlagCheck($reto)]]);
+        $user = Auth::user();
+        $resuleto = RetoResuelto::where('user_id', $user->id)->where('reto_id', $reto->id)->count();
+        if ($resuleto==0){
+            DB::table('reto_resueltos')->insert(['user_id' => $user->id,'reto_id' => $reto->id]);
+        }
+        $cuestionario = Cuestionario::where('nombre',$reto->categoria)->first();
+        return redirect()->route('retos.categoria', $cuestionario->id);
     }
 
 }
