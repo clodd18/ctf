@@ -338,16 +338,16 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert(['respuesta' => "nmap", 'pregunta_id' => 60]);
 
         //retos
-        DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un GET','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método get, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de la base de datos.','categoria' => 'Inyección de SQL','link' => 'http://ctf.test/retos/sqli/reto1','flag' => 'ctf']);
-        DB::table('retos')->insert(['nombre' => 'Reto 2','descripcion' => 'Descripcion 2','categoria' => 'Inyeccion de SQL','link' => 'URL 2','flag' => '22222222']);
-        DB::table('retos')->insert(['nombre' => 'Reto 3','descripcion' => 'Descripcion 3','categoria' => 'Inyeccion de comandos','link' => 'URL 3','flag' => '33333333']);
-        DB::table('retos')->insert(['nombre' => 'Reto 4','descripcion' => 'Descripcion 4','categoria' => 'Inyeccion de codigo','link' => 'URL 4','flag' => '44444444']);
-        DB::table('retos')->insert(['nombre' => 'Reto 5','descripcion' => 'Descripcion 5','categoria' => 'Fuerza bruta','link' => 'URL 5','flag' => '55555555']);
-        DB::table('retos')->insert(['nombre' => 'Reto 6','descripcion' => 'Descripcion 6','categoria' => 'XSS','link' => 'URL 6','flag' => '66666666']);
-        DB::table('retos')->insert(['nombre' => 'Reto 7','descripcion' => 'Descripcion 7','categoria' => 'XSS','link' => 'URL 7','flag' => '77777777']);
-        DB::table('retos')->insert(['nombre' => 'Reto 8','descripcion' => 'Descripcion 8','categoria' => 'CSRF','link' => 'URL 8','flag' => '88888888']);
-        DB::table('retos')->insert(['nombre' => 'Reto 9','descripcion' => 'Descripcion 9','categoria' => 'CSRF','link' => 'URL 9','flag' => '99999999']);
-        DB::table('retos')->insert(['nombre' => 'Reto 10','descripcion' => 'Descripcion 10','categoria' => 'Fuerza bruta','link' => 'URL 1','flag' => '00000000']);
+        DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un GET','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método get, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto1','flag' => 'ctf']);
+        DB::table('retos')->insert(['nombre' => 'Reto 2','descripcion' => 'Descripcion 2','categoria' => 'Inyeccion de SQL','enlace' => 'URL 2','flag' => '22222222']);
+        DB::table('retos')->insert(['nombre' => 'Reto 3','descripcion' => 'Descripcion 3','categoria' => 'Inyeccion de comandos','enlace' => 'URL 3','flag' => '33333333']);
+        DB::table('retos')->insert(['nombre' => 'Reto 4','descripcion' => 'Descripcion 4','categoria' => 'Inyeccion de codigo','enlace' => 'URL 4','flag' => '44444444']);
+        DB::table('retos')->insert(['nombre' => 'Reto 5','descripcion' => 'Descripcion 5','categoria' => 'Fuerza bruta','enlace' => 'URL 5','flag' => '55555555']);
+        DB::table('retos')->insert(['nombre' => 'Reto 6','descripcion' => 'Descripcion 6','categoria' => 'XSS','enlace' => 'URL 6','flag' => '66666666']);
+        DB::table('retos')->insert(['nombre' => 'Reto 7','descripcion' => 'Descripcion 7','categoria' => 'XSS','enlace' => 'URL 7','flag' => '77777777']);
+        DB::table('retos')->insert(['nombre' => 'Reto 8','descripcion' => 'Descripcion 8','categoria' => 'CSRF','enlace' => 'URL 8','flag' => '88888888']);
+        DB::table('retos')->insert(['nombre' => 'Reto 9','descripcion' => 'Descripcion 9','categoria' => 'CSRF','enlace' => 'URL 9','flag' => '99999999']);
+        DB::table('retos')->insert(['nombre' => 'Reto 10','descripcion' => 'Descripcion 10','categoria' => 'Fuerza bruta','enlace' => 'URL 1','flag' => '00000000']);
 
     }
 }
