@@ -49,6 +49,11 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 
     Route::get('/estadisticas',[EstadisticaController::class, 'show'])->name('estadisticas');
     Route::post('/estadisticas',[EstadisticaController::class, 'destroy'])->name('estadisticas.destroy');
+
+    //rutas de los retos
+    Route::get('retos/sqli/reto1', function () {return view('retos/sqli/reto1');})->name('retos.reto1');
+    Route::get('retos/sqli/reto1/{reto}',[RetoController::class, 'reto1get'])->name('retos.reto1get');
+
 });
 
 

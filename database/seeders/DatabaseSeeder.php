@@ -338,7 +338,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert(['respuesta' => "nmap", 'pregunta_id' => 60]);
 
         //retos
-        DB::table('retos')->insert(['nombre' => 'Reto 1','descripcion' => 'Descripcion 1','categoria' => 'Inyeccion de SQL','link' => 'URL 1','flag' => '11111111']);
+        DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un GET','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método get, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de la base de datos.','categoria' => 'Inyección de SQL','link' => 'http://ctf.test/retos/sqli/reto1','flag' => 'ctf']);
         DB::table('retos')->insert(['nombre' => 'Reto 2','descripcion' => 'Descripcion 2','categoria' => 'Inyeccion de SQL','link' => 'URL 2','flag' => '22222222']);
         DB::table('retos')->insert(['nombre' => 'Reto 3','descripcion' => 'Descripcion 3','categoria' => 'Inyeccion de comandos','link' => 'URL 3','flag' => '33333333']);
         DB::table('retos')->insert(['nombre' => 'Reto 4','descripcion' => 'Descripcion 4','categoria' => 'Inyeccion de codigo','link' => 'URL 4','flag' => '44444444']);
