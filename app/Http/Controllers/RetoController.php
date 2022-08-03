@@ -82,7 +82,4 @@ class RetoController extends Controller
         return redirect()->route('retos.categoria', $cuestionario->id);
     }
 
-    public function reto1get($reto){
-        return view('retos.reto1get', compact('reto'));
-    }
 }

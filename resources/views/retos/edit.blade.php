@@ -35,7 +35,7 @@
                     <div class="mt-4">
                         <x-jet-label class="text-lg font-bold"  value="{{ __('Categoría') }}" />
                         <select class=" border-gray-300 text-gray-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" type="text" name="categoria" style="width: 500px;" value="{{old('enlace', $reto->categoria)}}">
-                            <option value={{$reto->categoria}}>{{$reto->categoria}}</option>
+                            <option value="{{$reto->categoria}}">{{$reto->categoria}}</option>
                             <option value="Inyección de SQL">Inyección de SQL</option>
                             <option value="Inyección de Comandos">Inyección de Comandos</option>
                             <option value="Inyección de Código">Inyección de Código</option>

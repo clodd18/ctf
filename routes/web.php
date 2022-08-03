@@ -52,7 +52,13 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 
     //rutas de los retos
     Route::get('retos/sqli/reto1', function () {return view('retos/sqli/reto1');})->name('retos.reto1');
-    Route::get('retos/sqli/reto1/{reto}',[RetoController::class, 'reto1get'])->name('retos.reto1get');
+    Route::get('retos/sqli/reto2', function () {return view('retos/sqli/reto2');})->name('retos.reto2');
+    Route::post('retos/sqli/reto2', function () {return view('retos/sqli/reto2');})->name('retos.reto2');
+    Route::get('retos/sqli/reto3', function () {return view('retos/sqli/reto3');})->name('retos.reto3');
+    Route::post('retos/sqli/reto3', function () {return view('retos/sqli/reto3');})->name('retos.reto3');
+    Route::get('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.reto4');
+    Route::post('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.reto4');
+
 
 });
 

@@ -12,6 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        'http://ctf.test/retos/sqli/reto1',
+        '/retos/sqli/reto1',
+        '/retos/sqli/reto2',
+        '/retos/sqli/reto3',
+        //'/retos/sqli/reto4',
+
     ];
 }
