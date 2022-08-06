@@ -65,7 +65,6 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 
 
 Route::get('retos/fuerzabruta/index', function () {return view('retos/fuerzabruta/index');})->name('retos.fuerzabruta.index');
-//Route::get('retos/fuerzabruta/reto1', function () {return view('retos/fuerzabruta/reto1');})->name('retos.fuerzabruta.reto1');
 Route::get('retos/fuerzabruta/reto1', [RetoController::class, 'login1'])->name('retos.fuerzabruta.reto1');
 Route::get('retos/fuerzabruta/reto2', function () {return view('retos/fuerzabruta/reto2');})->name('retos.fuerzabruta.reto2');
 Route::post('retos/fuerzabruta/reto2', [RetoController::class, 'login2'])->name('retos.fuerzabruta.reto2');

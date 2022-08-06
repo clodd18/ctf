@@ -339,8 +339,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert(['respuesta' => "nmap", 'pregunta_id' => 60]);
 
         //usuarios
-        DB::table('users')->insert(['name' => "Manuel David Aguado Rodrigo", 'email' => "clodd18@gmail.com", 'password' => Hash::make('Clodd@5583')]);
-        DB::table('users')->insert(['name' => "John Smith", 'email' => "johnsmith@plataformactf.es", 'password' => Hash::make('jhonny')]);
+        DB::table('users')->insert(['name' => "John Smith", 'email' => "johnsmith@plataformactf.es", 'password' => Hash::make('chocolate')]);
         DB::table('users')->insert(['name' => "Jane Doe", 'email' => "janedoe@plataformactf.es", 'password' => Hash::make('i-love-you')]);
         DB::table('users')->insert(['name' => "Administrador", 'email' => "administrador@plataformactf.es", 'password' => Hash::make('Smarties!69')]);
 
@@ -349,8 +348,8 @@ class DatabaseSeeder extends Seeder
         DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un POST','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método post, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de usuario que ejecuta la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto2','flag' => 'forge']);
         DB::table('retos')->insert(['nombre' => 'Inyección de SQL ciega de tipo booleana','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que solo dice si un valor existe o no. Se le solicita al usuario que para resolver el reto logre descubrir el hash del usuario que ejecuta la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto3','flag' => '*00D7703EF02820983325BC03CC15D914B90FD341']);
         DB::table('retos')->insert(['nombre' => 'Inyección de SQL ciega basada en tiempo','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que no devuelve ningun tipo de informacion visible. Se le solicita al usuario que para resolver el reto introduzca la pregunta con id 21 que se encuentra en la tabla preguntas','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto4','flag' => '¿Qué es una inyección de código?']);
-        DB::table('retos')->insert(['nombre' => 'Reto 5','descripcion' => 'Descripcion 5','categoria' => 'Fuerza bruta','enlace' => 'URL 5','flag' => '55555555']);
-        DB::table('retos')->insert(['nombre' => 'Reto 6','descripcion' => 'Descripcion 6','categoria' => 'XSS','enlace' => 'URL 6','flag' => '66666666']);
+        DB::table('retos')->insert(['nombre' => 'Fuerza bruta básico','descripcion' => 'En este reto se le propone al usuario realizar un ataque de fuerza bruta sobre un formulario de log in de tipo GET. Se le solicita obtener la contraseña del usuario johnsmith@plataformactf.es','categoria' => 'Fuerza bruta','enlace' => 'https://plataformactf.es/retos/fuerzabruta/reto1','flag' => 'chocolate']);
+        DB::table('retos')->insert(['nombre' => 'Fuerza bruta con Token','descripcion' => 'En este reto se le propone al usuario realizar un ataque de fuerza bruta sobre un formulario de log in de tipo POST con un token protegiendo el acceso. Se le solicita obtener la contraseña del usuario administrador@plataformactf.es','categoria' => 'Fuerza bruta','enlace' => 'https://plataformactf.es/retos/fuerzabruta/reto2','flag' => 'Smarties!69']);
         DB::table('retos')->insert(['nombre' => 'Reto 7','descripcion' => 'Descripcion 7','categoria' => 'XSS','enlace' => 'URL 7','flag' => '77777777']);
         DB::table('retos')->insert(['nombre' => 'Reto 8','descripcion' => 'Descripcion 8','categoria' => 'CSRF','enlace' => 'URL 8','flag' => '88888888']);
         DB::table('retos')->insert(['nombre' => 'Reto 9','descripcion' => 'Descripcion 9','categoria' => 'CSRF','enlace' => 'URL 9','flag' => '99999999']);
