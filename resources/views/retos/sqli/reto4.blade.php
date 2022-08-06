@@ -51,6 +51,7 @@
                                     $resultado = array_shift($resultado);
                                     $flagValida = $resultado->flag;
                                     $flagUsuario = $_REQUEST['flag'];
+                                    //resto del codigo no necesario para este reto
                                 }
                             }
                         }

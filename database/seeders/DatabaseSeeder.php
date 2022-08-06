@@ -25,52 +25,52 @@ class DatabaseSeeder extends Seeder
         DB::table('cuestionarios')->insert(['nombre' => "Fuerza bruta",]);
 
         //Crear preguntas de las cuestionarios
-        DB::table('preguntas')->insert(['pregunta' => "¿Que es una inyeccion de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 1]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué es una inyección de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 1]);
         DB::table('preguntas')->insert(['pregunta' => "¿A que parametros afectan las Inyecciones SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 8]);
         DB::table('preguntas')->insert(['pregunta' => "¿Cuál no es un tipo de Inyecccion SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 11]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el payload mas basico y el primero que se recomienda usar para buscar una vulnerabilidad de Inyeccion de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 14]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el payload mas basico y el primero que se recomienda usar para buscar una vulnerabilidad de inyección de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 14]);
         DB::table('preguntas')->insert(['pregunta' => "La funcion USER() es para obtener el usurio activo en la base de datos, pero ¿DBMS?", 'cuestionario_id' => 1, 'respuesta_id' => 19]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el principal motivo de una Inyeccion SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 21]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cómo puede evitarse la inyeccion de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 26]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Qué herramienta usarias para detectar y explotar una inyeccion de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 30]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Las inyecciones basadas en tiempo son un tipo particular de inyeccion SQL de que tipo?", 'cuestionario_id' => 1, 'respuesta_id' => 35]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el principal motivo de una inyección SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 21]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cómo puede evitarse la inyección de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 26]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué herramienta usarias para detectar y explotar una inyección de SQL?", 'cuestionario_id' => 1, 'respuesta_id' => 30]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Las inyecciones basadas en tiempo son un tipo particular de inyección SQL de que tipo?", 'cuestionario_id' => 1, 'respuesta_id' => 35]);
         DB::table('preguntas')->insert(['pregunta' => "¿Para que usarias este payload? UNION ALL SELECT LOAD_FILE('/etc/passwd')", 'cuestionario_id' => 1, 'respuesta_id' => 37]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Que es una inyeccion de comandos?", 'cuestionario_id' => 2, 'respuesta_id' => 41]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué es una inyección de comandos?", 'cuestionario_id' => 2, 'respuesta_id' => 41]);
         DB::table('preguntas')->insert(['pregunta' => "¿A que parametros afectan las Inyecciones SQL?", 'cuestionario_id' => 2, 'respuesta_id' => 48]);
         DB::table('preguntas')->insert(['pregunta' => "Si tubieras esta instrucción y quisieras listar el fichero de contraseñas de linux, ¿Qué payload usarías?
                                                        \\n system(\"rm '\$file'\");", 'cuestionario_id' => 2, 'respuesta_id' => 50]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cómo intentarias detectar una posible inyeccion de comandos si no obtuvieras ningun resultado visible?", 'cuestionario_id' => 2, 'respuesta_id' => 55]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cómo puede evitarse la inyeccion de comandos de sistema operativo?", 'cuestionario_id' => 2, 'respuesta_id' => 57]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cómo intentarias detectar una posible inyección de comandos si no obtuvieras ningun resultado visible?", 'cuestionario_id' => 2, 'respuesta_id' => 55]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cómo puede evitarse la inyección de comandos de sistema operativo?", 'cuestionario_id' => 2, 'respuesta_id' => 57]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué tipo de caracteres deberiamos filtrar en la entrada de parametros?", 'cuestionario_id' => 2, 'respuesta_id' => 64]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cuál de estas no es una buena practica para evitar la inyeccion de comandos?", 'cuestionario_id' => 2, 'respuesta_id' => 68]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el primer paso antes de proseguir con una inyeccion de codigo?", 'cuestionario_id' => 2, 'respuesta_id' => 70]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cuál de estas no es una buena practica para evitar la inyección de comandos?", 'cuestionario_id' => 2, 'respuesta_id' => 68]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el primer paso antes de proseguir con una inyección de codigo?", 'cuestionario_id' => 2, 'respuesta_id' => 70]);
         DB::table('preguntas')->insert(['pregunta' => "Dado el siguietne código ¿Cómo sabrias el usuario con el que estamos trabajando?
                                                         \$target = \$_GET['ip'];
                                                         \$shell = shell_exec ('ping -c 3 '.\$target);", 'cuestionario_id' => 2, 'respuesta_id' => 74]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Qué herramienta proporcionan los lenguajes de programación modernos para evitar la inyeccion de comandos?", 'cuestionario_id' => 2, 'respuesta_id' => 77]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Que es una inyeccion de código?", 'cuestionario_id' => 3, 'respuesta_id' => 82]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cómo puede evitarse la inyeccion de comandos de sistema operativo?", 'cuestionario_id' => 3, 'respuesta_id' => 88]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Cómo se denomina al hecho de aprovecharse de una inyeccion de codigo para ejecutar condigo PHP y que este acabe ejecutando instrucciones del sistema operativo?", 'cuestionario_id' => 3, 'respuesta_id' => 90]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Qué limita el impacto de una inyeccion de código?", 'cuestionario_id' => 3, 'respuesta_id' => 96]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué herramienta proporcionan los lenguajes de programación modernos para evitar la inyección de comandos?", 'cuestionario_id' => 2, 'respuesta_id' => 77]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué es una inyección de código?", 'cuestionario_id' => 3, 'respuesta_id' => 82]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cómo puede evitarse la inyección de comandos de sistema operativo?", 'cuestionario_id' => 3, 'respuesta_id' => 88]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Cómo se denomina al hecho de aprovecharse de una inyección de codigo para ejecutar condigo PHP y que este acabe ejecutando instrucciones del sistema operativo?", 'cuestionario_id' => 3, 'respuesta_id' => 90]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué limita el impacto de una inyección de código?", 'cuestionario_id' => 3, 'respuesta_id' => 96]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué parametros son mas susceptibles de ser vulnerables a la inyección de código?", 'cuestionario_id' => 3, 'respuesta_id' => 97]);
         DB::table('preguntas')->insert(['pregunta' => "¿Cuál de las siguientes funciones podria insertarse en una inyección de codigo PHP para ejecutar una instrucción del sistema operativo?", 'cuestionario_id' => 3, 'respuesta_id' => 104]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué mal podría provocar la incusion de una linea de codigo como esta en nuestro codigo php?
                                                         include (\$GET[\"action\"])", 'cuestionario_id' => 3, 'respuesta_id' => 106]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Qué mecanismos de validacion de parametros podemos usar para evitar la inyeccion de codigo?", 'cuestionario_id' => 3, 'respuesta_id' => 112]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Qué payload usariamos en PHP para verificar que puede hacerse una inyeccion de codigo?", 'cuestionario_id' => 3, 'respuesta_id' => 113]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Qué funciones de PHP se deben evitar en programacion web para evitar la inyeccion de codigo?", 'cuestionario_id' => 3, 'respuesta_id' => 120]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Que es XSS (Cross Site Scripting)?", 'cuestionario_id' => 4, 'respuesta_id' => 123]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué mecanismos de validacion de parametros podemos usar para evitar la inyección de codigo?", 'cuestionario_id' => 3, 'respuesta_id' => 112]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué payload usariamos en PHP para verificar que puede hacerse una inyección de codigo?", 'cuestionario_id' => 3, 'respuesta_id' => 113]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué funciones de PHP se deben evitar en programacion web para evitar la inyección de codigo?", 'cuestionario_id' => 3, 'respuesta_id' => 120]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué es XSS (Cross Site Scripting)?", 'cuestionario_id' => 4, 'respuesta_id' => 123]);
         DB::table('preguntas')->insert(['pregunta' => "¿Las vulnerabilidades de tipo  XSS en donde se dan?", 'cuestionario_id' => 4, 'respuesta_id' => 125]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué tipos de ataques se puede aprovechar de una vulnerabilidad de XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 132]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué caracteriza una explotacion de vulnerabilidad XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 136]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Que herrameinta es la mas usada para explotar una vulnerabilidad de tipo XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 138]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué herrameinta es la mas usada para explotar una vulnerabilidad de tipo XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 138]);
         DB::table('preguntas')->insert(['pregunta' => "¿Cuál no es un tipo de XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 143]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué nos permite averiguar el uso de este payload?
                                                         >”’><script>alert(‘aaaaaa’)</script>", 'cuestionario_id' => 4, 'respuesta_id' => 148]);
         DB::table('preguntas')->insert(['pregunta' => "¿En que puntos del codigo HTML puede hacerse una inyecion de codigo para explotar la vulnerabilidad XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 152]);
         DB::table('preguntas')->insert(['pregunta' => "¿En que otro punto se puede aprovechar el XSS en codigo HTML?", 'cuestionario_id' => 4, 'respuesta_id' => 156]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué utilidad nos aporta Laravel para evitar parte de los ataques XSS?", 'cuestionario_id' => 4, 'respuesta_id' => 157]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Que es CSRF (Cross-site Request Forgery)?", 'cuestionario_id' => 5, 'respuesta_id' => 163]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué es CSRF (Cross-site Request Forgery)?", 'cuestionario_id' => 5, 'respuesta_id' => 163]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué elemento es necesario para poder llevar a cabo un ataque CSRF?", 'cuestionario_id' => 5, 'respuesta_id' => 168]);
         DB::table('preguntas')->insert(['pregunta' => "¿Por qué ocurren los ataques de CSRF?", 'cuestionario_id' => 5, 'respuesta_id' => 170]);
         DB::table('preguntas')->insert(['pregunta' => "¿A que parametros no afecta una vulnerabilidad CSRF?", 'cuestionario_id' => 5, 'respuesta_id' => 175]);
@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
         DB::table('preguntas')->insert(['pregunta' => "¿Cómo detectarias una vulnerabilidad de CSRF?", 'cuestionario_id' => 5, 'respuesta_id' => 189]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué otras medidas de seguridad se puede aportar para evitar el CSRF para mantern seguro al usuario?", 'cuestionario_id' => 5, 'respuesta_id' => 194]);
         DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el mecanismo de ataque mas común para aprovechar una vulnerabilidad de CSRF?", 'cuestionario_id' => 5, 'respuesta_id' => 197]);
-        DB::table('preguntas')->insert(['pregunta' => "¿Que es un ataque de fuerza bruta?", 'cuestionario_id' => 6, 'respuesta_id' => 204]);
+        DB::table('preguntas')->insert(['pregunta' => "¿Qué es un ataque de fuerza bruta?", 'cuestionario_id' => 6, 'respuesta_id' => 204]);
         DB::table('preguntas')->insert(['pregunta' => "¿Cuál es el metodo mas sencillo para evitar un ataque de fuerza bruta?", 'cuestionario_id' => 6, 'respuesta_id' => 208]);
         DB::table('preguntas')->insert(['pregunta' => "¿Cual es la herramienta basica para un ataque de fuerza bruta?", 'cuestionario_id' => 6, 'respuesta_id' => 209]);
         DB::table('preguntas')->insert(['pregunta' => "¿Qué herramientas pueden ser utiles para un ataque de fuerza bruta?", 'cuestionario_id' => 6, 'respuesta_id' => 216]);
@@ -128,9 +128,9 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert(['respuesta' => "Basadas en sentencias tipo union", 'pregunta_id' => 9]);
         DB::table('respuestas')->insert(['respuesta' => "De tipo ciegas", 'pregunta_id' => 9]);
         DB::table('respuestas')->insert(['respuesta' => "De ninguna de ellas", 'pregunta_id' => 9]);
-        DB::table('respuestas')->insert(['respuesta' => "En una inyeccion de tipo union", 'pregunta_id' => 10]);
-        DB::table('respuestas')->insert(['respuesta' => "En una inyeccion ciega para obtener el contenido del fichero passwd", 'pregunta_id' => 10]);
-        DB::table('respuestas')->insert(['respuesta' => "En una inyeccion basada en error", 'pregunta_id' => 10]);
+        DB::table('respuestas')->insert(['respuesta' => "En una inyección de tipo union", 'pregunta_id' => 10]);
+        DB::table('respuestas')->insert(['respuesta' => "En una inyección ciega para obtener el contenido del fichero passwd", 'pregunta_id' => 10]);
+        DB::table('respuestas')->insert(['respuesta' => "En una inyección basada en error", 'pregunta_id' => 10]);
         DB::table('respuestas')->insert(['respuesta' => "Ese payload no tiene utilidad", 'pregunta_id' => 10]);
 
         DB::table('respuestas')->insert(['respuesta' => "Es una vulnerabilidad que permite a un atacante inyectar y ejecutar comandos directamente en el sistema operativo en el que se ejecuta tu aplicación.", 'pregunta_id' => 11]);
@@ -184,7 +184,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert(['respuesta' => "Validando los campos de los formularios", 'pregunta_id' => 22]);
         DB::table('respuestas')->insert(['respuesta' => "Powershell", 'pregunta_id' => 23]);
         DB::table('respuestas')->insert(['respuesta' => "Webshell", 'pregunta_id' => 23]);
-        DB::table('respuestas')->insert(['respuesta' => "Inyeccion de comandos", 'pregunta_id' => 23]);
+        DB::table('respuestas')->insert(['respuesta' => "Inyección de comandos", 'pregunta_id' => 23]);
         DB::table('respuestas')->insert(['respuesta' => "Shell", 'pregunta_id' => 23]);
         DB::table('respuestas')->insert(['respuesta' => "La capacidad del lenguaje de programacion para comunicarse con el sistema", 'pregunta_id' => 24]);
         DB::table('respuestas')->insert(['respuesta' => "Los permisos del usuario que ejecuta el servidr web", 'pregunta_id' => 24]);
@@ -347,8 +347,8 @@ class DatabaseSeeder extends Seeder
         //retos
         DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un GET','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método get, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto1','flag' => 'ctf']);
         DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un POST','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método post, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de usuario que ejecuta la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto2','flag' => 'forge']);
-        DB::table('retos')->insert(['nombre' => 'Inyección de SQL ciega de tipo booleana','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que solo dice si un valor existe o no. Se le solicita al usuario que para resolver el reto logre descubrir el hash del usuario root.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto3','flag' => 'forge']);
-        DB::table('retos')->insert(['nombre' => 'Inyección de SQL ciega basada en tiempo','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que no devuelve ningun tipo de informacion visible. Se le solicita al usuario que para resolver el reto introduzca la pregunta con id 21 que se encuentra en la tabla preguntas','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto4','flag' => '¿Que es una inyeccion de código?']);
+        DB::table('retos')->insert(['nombre' => 'Inyección de SQL ciega de tipo booleana','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que solo dice si un valor existe o no. Se le solicita al usuario que para resolver el reto logre descubrir el hash del usuario que ejecuta la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto3','flag' => '*00D7703EF02820983325BC03CC15D914B90FD341']);
+        DB::table('retos')->insert(['nombre' => 'Inyección de SQL ciega basada en tiempo','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que no devuelve ningun tipo de informacion visible. Se le solicita al usuario que para resolver el reto introduzca la pregunta con id 21 que se encuentra en la tabla preguntas','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto4','flag' => '¿Qué es una inyección de código?']);
         DB::table('retos')->insert(['nombre' => 'Reto 5','descripcion' => 'Descripcion 5','categoria' => 'Fuerza bruta','enlace' => 'URL 5','flag' => '55555555']);
         DB::table('retos')->insert(['nombre' => 'Reto 6','descripcion' => 'Descripcion 6','categoria' => 'XSS','enlace' => 'URL 6','flag' => '66666666']);
         DB::table('retos')->insert(['nombre' => 'Reto 7','descripcion' => 'Descripcion 7','categoria' => 'XSS','enlace' => 'URL 7','flag' => '77777777']);

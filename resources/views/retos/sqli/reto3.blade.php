@@ -16,7 +16,6 @@
                         <input class=" border-gray-300 text-gray-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" type="text" name="reto" style="width: 500px;" value="{{old('reto')}}">
                     </div>
                     <div class="flex items-center justify-center mt-4">
-
                         <button type="submit" class="mr-4 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition'">Consultar</button>
                     </div>
                     <?php
@@ -33,12 +32,7 @@
                         }
                     ?>
                 </form>
-
             </div>
-
         </div>
     </div>
-
-
-
 </x-app-layout>

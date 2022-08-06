@@ -89,7 +89,6 @@ class RetoController extends Controller
             return view('retos.fuerzabruta.reto1');
         }else{
             $resultado = User::where('email', $request->usuario)->first();
-            //return $resultado;
             if(!$resultado){
                 return view('retos.fuerzabruta.reto1');
             }elseif(Hash::check($request->password, $resultado->password)){
@@ -105,7 +104,6 @@ class RetoController extends Controller
             return view('retos.fuerzabruta.reto2');
         }else{
             $resultado = User::where('email', $request->usuario)->first();
-            //return $resultado;
             if(!$resultado){
                 return view('retos.fuerzabruta.reto2');
             }elseif(Hash::check($request->password, $resultado->password)){
