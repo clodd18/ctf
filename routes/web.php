@@ -51,14 +51,19 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::post('/estadisticas',[EstadisticaController::class, 'destroy'])->name('estadisticas.destroy');
 
     //rutas de los retos
-    Route::get('retos/sqli/reto1', function () {return view('retos/sqli/reto1');})->name('retos.reto1');
-    Route::get('retos/sqli/reto2', function () {return view('retos/sqli/reto2');})->name('retos.reto2');
-    Route::post('retos/sqli/reto2', function () {return view('retos/sqli/reto2');})->name('retos.reto2');
-    Route::get('retos/sqli/reto3', function () {return view('retos/sqli/reto3');})->name('retos.reto3');
-    Route::post('retos/sqli/reto3', function () {return view('retos/sqli/reto3');})->name('retos.reto3');
-    Route::get('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.reto4');
-    Route::post('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.reto4');
+    Route::get('retos/sqli/reto1', function () {return view('retos/sqli/reto1');})->name('retos.sqli.reto1');
+    Route::get('retos/sqli/reto2', function () {return view('retos/sqli/reto2');})->name('retos.sqli.reto2');
+    Route::post('retos/sqli/reto2', function () {return view('retos/sqli/reto2');})->name('retos.sqli.reto2');
+    Route::get('retos/sqli/reto3', function () {return view('retos/sqli/reto3');})->name('retos.sqli.reto3');
+    Route::post('retos/sqli/reto3', function () {return view('retos/sqli/reto3');})->name('retos.sqli.reto3');
+    Route::get('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.sqli.reto4');
+    Route::post('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.sqli.reto4');
 
+    Route::get('retos/fuerzabruta/index', function () {return view('retos/fuerzabruta/index');})->name('retos.fuerzabruta.index');
+    //Route::get('retos/fuerzabruta/reto1', function () {return view('retos/fuerzabruta/reto1');})->name('retos.fuerzabruta.reto1');
+    Route::get('retos/fuerzabruta/reto1', [RetoController::class, 'login1'])->name('retos.fuerzabruta.reto1');
+    Route::get('retos/fuerzabruta/reto2', function () {return view('retos/fuerzabruta/reto2');})->name('retos.fuerzabruta.reto2');
+    Route::post('retos/fuerzabruta/reto2', [RetoController::class, 'login2'])->name('retos.fuerzabruta.reto2');
 
 });
 

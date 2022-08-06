@@ -15,7 +15,7 @@ class VerifyCsrfToken extends Middleware
         '/retos/sqli/reto1',
         '/retos/sqli/reto2',
         '/retos/sqli/reto3',
-        //'/retos/sqli/reto4',
 
+        '/retos/fuerzabruta/reto1',
     ];
 }

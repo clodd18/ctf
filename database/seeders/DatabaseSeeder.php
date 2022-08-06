@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -336,6 +337,12 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert(['respuesta' => "Ncrack", 'pregunta_id' => 60]);
         DB::table('respuestas')->insert(['respuesta' => "Nikto", 'pregunta_id' => 60]);
         DB::table('respuestas')->insert(['respuesta' => "nmap", 'pregunta_id' => 60]);
+
+        //usuarios
+        DB::table('users')->insert(['name' => "Manuel David Aguado Rodrigo", 'email' => "clodd18@gmail.com", 'password' => Hash::make('Clodd@5583')]);
+        DB::table('users')->insert(['name' => "John Smith", 'email' => "johnsmith@plataformactf.es", 'password' => Hash::make('jhonny')]);
+        DB::table('users')->insert(['name' => "Jane Doe", 'email' => "janedoe@plataformactf.es", 'password' => Hash::make('i-love-you')]);
+        DB::table('users')->insert(['name' => "Administrador", 'email' => "administrador@plataformactf.es", 'password' => Hash::make('Smarties!69')]);
 
         //retos
         DB::table('retos')->insert(['nombre' => 'Inyección de SQL en un GET','descripcion' => 'En este reto se propone al usuario realizar una inyección de SQL en una web que utiliza un formulario para, a través del método get, realizar una acción que devuelva cierta información. Se le solicita al usuario que para resolver el reto logre descubrir el nombre de la base de datos.','categoria' => 'Inyección de SQL','enlace' => 'http://ctf.test/retos/sqli/reto1','flag' => 'ctf']);

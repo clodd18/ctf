@@ -7,10 +7,12 @@ use App\Models\Cuestionario;
 use App\Models\Resultado;
 use App\Models\Reto;
 use App\Models\RetoResuelto;
+use App\Models\User;
 use App\Rules\FlagCheck;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class RetoController extends Controller
 {
@@ -80,6 +82,38 @@ class RetoController extends Controller
         }
         $cuestionario = Cuestionario::where('nombre',$reto->categoria)->first();
         return redirect()->route('retos.categoria', $cuestionario->id);
+    }
+
+    public function login1(Request $request){
+        if (is_null($request->usuario) || is_null($request->password)){
+            return view('retos.fuerzabruta.reto1');
+        }else{
+            $resultado = User::where('email', $request->usuario)->first();
+            //return $resultado;
+            if(!$resultado){
+                return view('retos.fuerzabruta.reto1');
+            }elseif(Hash::check($request->password, $resultado->password)){
+                return view('retos.fuerzabruta.index');
+            }else{
+                return view('retos.fuerzabruta.reto1');
+            }
+        }
+    }
+
+    public function login2(Request $request){
+        if (is_null($request->usuario) || is_null($request->password)){
+            return view('retos.fuerzabruta.reto2');
+        }else{
+            $resultado = User::where('email', $request->usuario)->first();
+            //return $resultado;
+            if(!$resultado){
+                return view('retos.fuerzabruta.reto2');
+            }elseif(Hash::check($request->password, $resultado->password)){
+                return view('retos.fuerzabruta.index');
+            }else{
+                return view('retos.fuerzabruta.reto2');
+            }
+        }
     }
 
 }
