@@ -28,7 +28,8 @@
                             echo $mensaje;
                             echo "<br />";
                             if (isset($_SERVER[ 'HTTP_REFERER' ])){
-                                if (substr($_SERVER[ 'HTTP_REFERER' ], 0, 32) != "http://ctf.test/retos/csrf/reto1" && $_SERVER[ 'HTTP_REFERER' ] != "http://ctf.test/login"){
+                                if (substr($_SERVER[ 'HTTP_REFERER' ], 0, 41) != "https://plataformactf.es/retos/csrf/reto1" && $_SERVER[ 'HTTP_REFERER' ] != "https://plataformactf.es/login"){
+
                                     echo "<br />";
                                     echo "vienes de la pagina ".$_SERVER[ 'HTTP_REFERER' ];
                                     echo "<br /><br />";
