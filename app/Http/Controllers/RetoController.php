@@ -76,8 +76,8 @@ class RetoController extends Controller
     {
         $this->validate($request, ['flag'.$reto->id => ['required', new FlagCheck($reto)]]);
         $user = Auth::user();
-        $resuleto = RetoResuelto::where('user_id', $user->id)->where('reto_id', $reto->id)->count();
-        if ($resuleto==0){
+        $resuelto = RetoResuelto::where('user_id', $user->id)->where('reto_id', $reto->id)->count();
+        if ($resuelto==0){
             DB::table('reto_resueltos')->insert(['user_id' => $user->id,'reto_id' => $reto->id]);
         }
         $cuestionario = Cuestionario::where('nombre',$reto->categoria)->first();
@@ -114,4 +114,32 @@ class RetoController extends Controller
         }
     }
 
+    public function mensaje(Request $request){
+        $user = Auth::user();
+        if (!is_null($request->texto)){
+            DB::table('mensajes')->insert(['user_id' => $user->id, 'mensaje' => $request->texto]);
+        }
+        $msj = DB::select("select mensaje from mensajes order by id desc limit 1");
+        return view('retos.xss.reto2', compact('msj'));
+    }
+
+    public function mensaje2(Request $request){
+        $user = Auth::user();
+        if (!is_null($request->texto)){
+            DB::table('mensajes')->insert(['user_id' => $user->id, 'mensaje' => $request->texto]);
+        }
+        $msj = DB::select("select mensaje from mensajes where user_id = '$user->id' order by id desc limit 1");
+        return view('retos.xss.reto3', compact('msj'));
+    }
+
+    public function cambiarPass(Request $request){
+        $user = Auth::user();
+        if (!is_null($request->pass1) && !is_null($request->pass2) && $request->pass1===$request->pass2){
+            DB::table('users')->where('id', $user->id)->update(['password' => Hash::make($request->pass1)]);
+            $mensaje = "Contraseña cambiada correctamente";
+        }else{
+            $mensaje = "Error al cambiar la contraseña";
+        }
+        return view('retos.csrf.reto1', compact('mensaje'));
+    }
 }

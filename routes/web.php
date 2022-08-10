@@ -59,7 +59,21 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::get('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.sqli.reto4');
     Route::post('retos/sqli/reto4', function () {return view('retos/sqli/reto4');})->name('retos.sqli.reto4');
 
+    Route::get('retos/comandos/reto1', function () {return view('retos/comandos/reto1');})->name('retos.comandos.reto1');
+    Route::get('retos/comandos/reto2', function () {return view('retos/comandos/reto2');})->name('retos.comandos.reto2');
+    Route::post('retos/comandos/reto2', function () {return view('retos/comandos/reto2');})->name('retos.comandos.reto2');
 
+    Route::get('retos/codigo/reto1', function () {return view('retos/codigo/reto1');})->name('retos.codigo.reto1');
+    Route::get('retos/codigo/reto2', function () {return view('retos/codigo/reto2');})->name('retos.codigo.reto2');
+    Route::post('retos/codigo/reto2', function () {return view('retos/codigo/reto2');})->name('retos.codigo.reto2');
+
+    Route::get('retos/xss/reto1', function () {return view('retos/xss/reto1');})->name('retos.xss.reto1');
+    Route::get('retos/xss/reto2', [RetoController::class, 'mensaje'])->name('retos.xss.reto2');
+    Route::post('retos/xss/reto2', [RetoController::class, 'mensaje'])->name('retos.xss.reto2');
+    Route::get('retos/xss/reto3', [RetoController::class, 'mensaje2'])->name('retos.xss.reto3');
+    Route::post('retos/xss/reto3', [RetoController::class, 'mensaje2'])->name('retos.xss.reto3');
+
+    Route::get('retos/csrf/reto1', [RetoController::class, 'cambiarPass'])->name('retos.csrf.reto1');
 
 });
 
