@@ -21,7 +21,7 @@
                     <?php
                         if( isset( $_REQUEST[ 'ip' ] ) ) {
                             $direccion= $_GET['ip'];
-                            $consulta = shell_exec('ping '.$direccion);
+                            $consulta = shell_exec('ping -c 4 '.$direccion);
                             echo '<pre>'.$consulta.'</pre>';
                         }
                     ?>
