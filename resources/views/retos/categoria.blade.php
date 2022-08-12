@@ -21,7 +21,9 @@
 
                                 <div class="ml-12">
                                     <div class="mt-2 text-sm text-gray-500">
-                                        La inyección SQL, o SQLi, es un tipo de ataque a una aplicación web que permite a un atacante insertar sentencias SQL maliciosas en la aplicación web, obteniendo potencialmente acceso a datos sensibles en la base de datos o destruyendo estos datos.</div>
+                                        La inyección SQL, o SQLi, es un tipo de ataque a una aplicación web que permite a un atacante insertar sentencias SQL maliciosas en la aplicación web, obteniendo potencialmente acceso a datos sensibles en la base de datos o destruyendo estos datos.
+                                        <a href="{{route('retos.sqli.info', 1)}}" style="color:#0000FF;">  "ver mas" </a>
+                                    </div>
                                 </div>
                             </div>
                             @break
@@ -34,7 +36,9 @@
 
                                 <div class="ml-12">
                                     <div class="mt-2 text-sm text-gray-500">
-                                        Command Injection (o inyección de comandos) es una vulnerabilidad que permite a un atacante inyectar y ejecutar comandos directamente en el sistema operativo en el que se ejecuta tu aplicación.</div>
+                                        Command Injection (o inyección de comandos) es una vulnerabilidad que permite a un atacante inyectar y ejecutar comandos directamente en el sistema operativo en el que se ejecuta tu aplicación.
+                                        <a href="{{route('retos.comandos.info', 1)}}" style="color:#0000FF;">  "ver mas" </a>
+                                    </div>
                                 </div>
                             </div>
                             @break
@@ -47,7 +51,9 @@
 
                                 <div class="ml-12">
                                     <div class="mt-2 text-sm text-gray-500">
-                                        El Code Injection es un tipo de ataque que permite al atacante inyectar código fuente en la aplicación de forma que es interpretado y ejecutado.</div>
+                                        El Code Injection es un tipo de ataque que permite al atacante inyectar código fuente en la aplicación de forma que es interpretado y ejecutado.
+                                        <a href="{{route('retos.codigo.info', 1)}}" style="color:#0000FF;">  "ver mas" </a>
+                                    </div>
                                 </div>
                             </div>
                             @break
@@ -60,7 +66,9 @@
 
                                 <div class="ml-12">
                                     <div class="mt-2 text-sm text-gray-500">
-                                        XSS (Cross Site Scripting) es una vulnerabilidad que permite a un atacante insertar scripts o secuencias de código malicioso en el navegador web de un usuario.</div>
+                                        XSS (Cross Site Scripting) es una vulnerabilidad que permite a un atacante insertar scripts o secuencias de código malicioso en el navegador web de un usuario.
+                                        <a href="{{route('retos.xss.info', 1)}}" style="color:#0000FF;">  "ver mas" </a>
+                                    </div>
                                 </div>
                             </div>
                             @break
@@ -73,7 +81,9 @@
 
                                 <div class="ml-12">
                                     <div class="mt-2 text-sm text-gray-500">
-                                        La vulnerabilidad Cross-Site Request Forgery (CSRF) ocurre en aplicaciones web y le permite a un atacante inducir a los usuarios a realizar acciones que no pretenden realizar, como por ejemplo por ejemplo, cambiar su dirección de correo electrónico, su contraseña o realizar una transferencia de fondos.</div>
+                                        La vulnerabilidad Cross-Site Request Forgery (CSRF) ocurre en aplicaciones web y le permite a un atacante inducir a los usuarios a realizar acciones que no pretenden realizar, como por ejemplo por ejemplo, cambiar su dirección de correo electrónico, su contraseña o realizar una transferencia de fondos.
+                                        <a href="{{route('retos.csrf.info', 1)}}" style="color:#0000FF;">  "ver mas" </a>
+                                    </div>
                                 </div>
                             </div>
                             @break
@@ -87,6 +97,7 @@
                                 <div class="ml-12">
                                     <div class="mt-2 text-sm text-gray-500">
                                         Un ataque de fuerza bruta ocurre cuando el atacante emplea determinadas técnicas para probar combinaciones de contraseñas con el objetivo de descubrir las credenciales de una potencial víctima y así lograr acceso a una cuenta o sistema.
+                                        <a href="{{route('retos.fuerzabruta.info', 1)}}" style="color:#0000FF;">  "ver mas" </a>
                                     </div>
                                 </div>
                             </div>
