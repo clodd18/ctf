@@ -34,7 +34,6 @@
                                     echo "vienes de la pagina ".$_SERVER[ 'HTTP_REFERER' ];
                                     echo "<br /><br />";
                                     echo "reto superado el flag que buscas es Draconis";
-                                    //<iframe src="/retos/csrf/reto1?pass1=1234&pass2=1234" style=""position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"></iframe>
                                 }
                             }
                         }
