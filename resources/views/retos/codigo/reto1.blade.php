@@ -22,7 +22,6 @@
                         if( isset( $_REQUEST[ 'texto' ] ) ) {
                             $texto= $_GET['texto'];
                             eval("echo '".$texto."';");
-                            //hola';phpinfo();'
                         }
                     ?>
                 </form>
