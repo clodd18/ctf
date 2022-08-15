@@ -63,8 +63,6 @@
                                     foreach ($msj as $m ) {
                                         $mensaje = str_replace( '<script>', '', $m->mensaje );
                                         echo $mensaje;
-                                        //<script >alert('lo que sea');</script>
-                                        //con un espacio
                                     }
                                 ?>
 

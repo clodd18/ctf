@@ -62,7 +62,6 @@
                                     if( isset( $_REQUEST[ 'texto' ] ) ) {
                                         $texto= $_GET['texto'];
                                         echo $texto;
-                                        //<script>alert('lo que sea');</script>
                                     }
                                 ?>
 

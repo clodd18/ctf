@@ -63,8 +63,6 @@
                                     foreach ($msj as $m ) {
                                         $mensaje = preg_replace( '/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/i', '', $m->mensaje );
                                         echo $mensaje;
-                                        //<a onclick="alert('lo que sea')">alert</a>
-                                        //haciendo clic en alert sale el alert
                                     }
                                 ?>
 

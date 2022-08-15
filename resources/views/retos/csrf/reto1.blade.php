@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Cambio de contraseña') }}
+            {{ __('CSRF local') }}
         </h2>
     </x-slot>
 
@@ -10,7 +10,7 @@
         <div class="w-full sm:max-w-2xl mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
             <div class="ml-12 mr-12">
                 <form action="" method="GET">
-                    En esta página podemos imprimir en pantalla el texto escrito.
+                    En esta página podemos cambiar la contraseña de nuestro usuario.
                     <div class="mt-1">
                         <x-jet-label class="text-lg font-bold"  value="{{ __('Introduce la nueva contraseña') }}" />
                         <input class=" border-gray-300 text-gray-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" type="text" name="pass1" style="width: 500px;" value="{{old('pass1')}}">
