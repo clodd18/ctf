@@ -50,7 +50,7 @@
                     <div class="w-full sm:max-w-2xl mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                         <div class="ml-12 mr-12">
                             <form action="" method="POST">
-                                En esta página podemos guardar un mensaje para futuras visitas de cualquier usuario.
+                                En esta página podemos guardar un mensaje para tus futuras visitas.
                                 <div class="mt-1">
                                     <x-jet-label class="text-lg font-bold"  value="{{ __('Mensaje a guardar') }}" />
                                     <input class=" border-gray-300 text-gray-500 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" type="text" name="texto" style="width: 500px;" value="{{old('texto')}}">
